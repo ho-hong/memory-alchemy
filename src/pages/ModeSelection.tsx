@@ -52,7 +52,7 @@ export default function ModeSelection() {
             </div>
             <div>
               <p className="text-lg font-black text-white font-headline">기억 변환기</p>
-              <p className="text-[0.7rem] text-[#D1D1D1]/40 uppercase tracking-widest font-label">Lead Specialist</p>
+              <p className="text-[0.7rem] text-[#D1D1D1]/40 uppercase tracking-widest font-label">Memory Converter</p>
             </div>
           </div>
 
