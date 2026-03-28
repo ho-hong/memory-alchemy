@@ -59,7 +59,7 @@ export default function ModeSelection() {
           <nav className="space-y-1 mb-10">
             {[
               { icon: 'upload_file', label: '기억 업로드' },
-              { icon: 'content_cut', label: '수술대', active: true },
+              { icon: 'content_cut', label: '기억 조작실', active: true },
               { icon: 'inventory_2', label: '기록 보관소' },
               { icon: 'delete_forever', label: '영구 삭제' },
             ].map(({ icon, label, active }) => (
@@ -154,7 +154,7 @@ export default function ModeSelection() {
                 onClick={() => selectedLabel && navigate('/result', { state: { memory, mode: selectedLabel } })}
                 className="px-12 py-5 bg-primary text-on-primary font-bold rounded-md hover:bg-primary-dim transition-colors flex items-center gap-2 group shadow-lg shadow-primary/20"
               >
-                수술 집도하기
+                기억 변환하기
                 <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
               </button>
             </div>
