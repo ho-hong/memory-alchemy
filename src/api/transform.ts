@@ -85,7 +85,7 @@ const PROMPTS: Record<string, string> = {
 `,
 }
 // ================================================================
-const BASE_URL = '/api'
+const BASE_URL = import.meta.env.VITE_API_BASE_URL as string
 const API_KEY = import.meta.env.VITE_API_KEY as string
 
 export async function transformMemory(mode: string, memory: string): Promise<string> {
