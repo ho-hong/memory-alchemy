@@ -51,15 +51,15 @@ export default function ModeSelection() {
               />
             </div>
             <div>
-              <p className="text-lg font-black text-white font-headline">임상 큐레이터</p>
-              <p className="text-[0.7rem] text-[#D1D1D1]/40 uppercase tracking-widest font-label">Lead Specialist</p>
+              <p className="text-lg font-black text-white font-headline">기억 변환기</p>
+              <p className="text-[0.7rem] text-[#D1D1D1]/40 uppercase tracking-widest font-label">Memory Converter</p>
             </div>
           </div>
 
           <nav className="space-y-1 mb-10">
             {[
               { icon: 'upload_file', label: '기억 업로드' },
-              { icon: 'content_cut', label: '수술대', active: true },
+              { icon: 'content_cut', label: '기억 조작실', active: true },
               { icon: 'inventory_2', label: '기록 보관소' },
               { icon: 'delete_forever', label: '영구 삭제' },
             ].map(({ icon, label, active }) => (
@@ -90,7 +90,7 @@ export default function ModeSelection() {
               Stage 02: Recalibration
             </p>
             <h2 className="text-5xl font-extrabold font-headline tracking-tighter text-on-surface leading-[1.1] mb-6">
-              수술대 위에 놓인 기억,<br />어떤 질감으로 덮을까요?
+              기억은 어차피 왜곡됩니다.<br />우리가 먼저 해드릴게요.
             </h2>
             <div className="bg-surface-container-low p-6 rounded-lg border-l-4 border-primary">
               <p className="text-on-surface-variant font-body leading-relaxed italic">
@@ -148,13 +148,13 @@ export default function ModeSelection() {
           <div className="flex justify-end pr-12 pt-8">
             <div className="flex flex-col items-end gap-4">
               <p className="text-xs text-on-surface-variant/40 font-label text-right max-w-xs">
-                * 선택된 모드는 비가역적이며, 원래의 감정적 고통은 인위적인 평온함으로 대체됩니다.
+                * 선택 후 발생하는 억울함 감소에 대해 저희는 책임지지 않습니다.
               </p>
               <button
                 onClick={() => selectedLabel && navigate('/result', { state: { memory, mode: selectedLabel } })}
                 className="px-12 py-5 bg-primary text-on-primary font-bold rounded-md hover:bg-primary-dim transition-colors flex items-center gap-2 group shadow-lg shadow-primary/20"
               >
-                수술 집도하기
+                기억 변환하기
                 <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
               </button>
             </div>
