@@ -1,73 +1,75 @@
-# React + TypeScript + Vite
+ # MEMORY ALCHEMY
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+  > 부끄럽고 지우고 싶은 기억을 AI가 새로운 서사로 재구성해주는 웹 앱
 
-Currently, two official plugins are available:
+  ---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+  ## 프로젝트 소개
 
-## React Compiler
+  사용자가 입력한 부정적인 기억을 선택한 모드에 따라 LLM이 새로운 형식으로 변환합니다.
+  교훈, 뉴스 기사, 음모론, 법정 판결문 중 원하는 스타일을 선택해 기억을 미화할 수 있습니다.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+  ---
 
-## Expanding the ESLint configuration
+  ## 주요 기능
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+  - 기억 입력 → 미화 모드 선택 → AI 변환 결과 출력
+  - 4가지 변환 모드: **The Lesson / The News / The Conspiracy / The Verdict**
+  - 원본 기억과 변환된 기억을 나란히 비교
+  - 원본 기억 삭제 시뮬레이션 (로딩 애니메이션 포함)
+  - Markdown 형식으로 렌더링된 변환 결과
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+  ---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+  ## 기술 스택
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+  | 분류 | 기술 |
+  |------|------|
+  | Frontend | React 19, TypeScript |
+  | Build Tool | Vite |
+  | Styling | Tailwind CSS v3, @tailwindcss/typography |
+  | Routing | React Router v6 |
+  | Markdown | react-markdown |
+  | AI API | Claude Sonnet 4.6 (MindLogic Gateway) |
+  | Font | Manrope, Pretendard, Inter (Google Fonts) |
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+  ---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+  ## 시작하기
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+  ```bash
+  # 의존성 설치
+  npm install
+
+  # 환경변수 설정
+  cp .env.example .env
+  # .env 파일에 VITE_API_KEY 입력
+
+  # 개발 서버 실행
+  npm run dev
+
+  ---
+  환경변수
+
+  VITE_API_KEY=your_api_key_here
+
+  ▎ .env 파일은 .gitignore에 등록되어 있어 Git에 업로드되지 않습니다.
+
+  ---
+  페이지 구성
+
+  ┌──────────┬──────────────────────┐
+  │   경로   │         설명         │
+  ├──────────┼──────────────────────┤
+  │ /        │ 기억 입력            │
+  ├──────────┼──────────────────────┤
+  │ /mode    │ 변환 모드 선택       │
+  ├──────────┼──────────────────────┤
+  │ /result  │ 변환 결과 확인       │
+  ├──────────┼──────────────────────┤
+  │ /erasing │ 삭제 진행 애니메이션 │
+  ├──────────┼──────────────────────┤
+  │ /failed  │ 삭제 실패 화면       │
+  ├──────────┼──────────────────────┤
+  │ ```      │                      │
+  └──────────┴──────────────────────┘
