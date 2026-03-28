@@ -106,21 +106,6 @@ export default function InputMemory() {
           </div>
         </div>
 
-        {/* Floating glass card */}
-        <div className="hidden lg:block absolute bottom-12 right-12 w-64 h-80 rounded-xl overflow-hidden backdrop-blur-xl border border-white/[0.08] p-6 transform rotate-3"
-          style={{ background: 'rgba(255,255,255,0.03)', boxShadow: '0 20px 40px rgba(0,0,0,0.4)' }}>
-          <div className="h-full border border-primary/20 flex flex-col justify-between p-4">
-            <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
-              <span className="material-symbols-outlined text-primary text-sm">auto_awesome</span>
-            </div>
-            <div className="space-y-3">
-              <div className="h-2 w-full bg-primary/20 rounded" />
-              <div className="h-2 w-4/5 bg-primary/20 rounded" />
-              <div className="h-2 w-2/3 bg-primary/20 rounded" />
-            </div>
-            <span className="font-label text-[0.6rem] uppercase tracking-widest text-primary/60">Visualizer v.2.4</span>
-          </div>
-        </div>
       </main>
     </div>
   )
