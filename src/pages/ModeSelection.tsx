@@ -37,7 +37,7 @@ export default function ModeSelection() {
 
   return (
     <div className="bg-background text-on-background min-h-screen selection:bg-primary/30">
-      <Header activeNav="저장소" />
+      <Header />
 
       <main className="pt-32 pb-20 px-8 max-w-7xl mx-auto flex flex-col md:flex-row gap-12">
         {/* SideNav */}
