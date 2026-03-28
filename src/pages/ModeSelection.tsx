@@ -148,7 +148,7 @@ export default function ModeSelection() {
           <div className="flex justify-end pr-12 pt-8">
             <div className="flex flex-col items-end gap-4">
               <p className="text-xs text-on-surface-variant/40 font-label text-right max-w-xs">
-                * 선택 후 발생하는 억울함 감소에 대해 저희는 책임지지 않습니다.
+                * 선택 후 발생하는 부작용에 대해 저희는 책임지지 않습니다.
               </p>
               <button
                 onClick={() => selectedLabel && navigate('/result', { state: { memory, mode: selectedLabel } })}
