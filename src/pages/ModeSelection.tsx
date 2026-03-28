@@ -90,7 +90,7 @@ export default function ModeSelection() {
               Stage 02: Recalibration
             </p>
             <h2 className="text-5xl font-extrabold font-headline tracking-tighter text-on-surface leading-[1.1] mb-6">
-              수술대 위에 놓인 기억,<br />어떤 질감으로 덮을까요?
+              기억은 어차피 왜곡됩니다.<br />우리가 먼저 해드릴게요.
             </h2>
             <div className="bg-surface-container-low p-6 rounded-lg border-l-4 border-primary">
               <p className="text-on-surface-variant font-body leading-relaxed italic">
