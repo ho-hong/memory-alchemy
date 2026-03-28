@@ -34,7 +34,7 @@ export default function InputMemory() {
               Memories for Improvement
             </span>
             <h1 className="font-headline text-3xl font-semibold text-on-surface tracking-tight">
-              임상 기록: 기억의 재구성
+              기억 조작단: 기억의 재구성
             </h1>
           </div>
 
