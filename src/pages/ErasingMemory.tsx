@@ -137,16 +137,6 @@ export default function ErasingMemory() {
           </div>
         </footer>
 
-        {/* Blurred image slice */}
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-48 h-96 opacity-10 pointer-events-none">
-          <div className="w-full h-full grayscale invert overflow-hidden rounded-l-3xl border-l border-y" style={{ borderColor: 'rgba(168,85,247,0.1)' }}>
-            <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuARsgK6pLNqm_onbJJCcx4aiSznXgGdbRPSNtV7IDyjmFVZaxhJV1JIt892uYunTvnJmIECWkjzgyjDGqRBjLAqMqCpPF3djgFlqVyPDlQXRUnEpzd4WLJMloDltE1Ewl6xgKc7C9keVBTxYhUIAg6Su1LGZoZCT1YUs69UzI2PffNeoHM-GIWACe_R_qk5hncxf_G0kF0h1duncrRxgL8fvJDhwZhw7r6VrRFknEYJfOYlj4pRb1oQMaEPRfd3xY7AShEdx8NY4C6q"
-              alt="neural pathways"
-              className="w-full h-full object-cover blur-sm brightness-150 contrast-125"
-            />
-          </div>
-        </div>
       </main>
     </div>
   )
